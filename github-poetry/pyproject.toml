@@ -1,0 +1,47 @@
+[project]
+name = "sets-of-languages"
+version = "0.1.0"
+description = "Code for the paper \"Benchmarking Neural Networks on Formal Languages.\""
+readme = "README.md"
+authors = [
+    { name = "Alexandra Butoi", email = "alexandra.butoi@inf.ethz.ch" },
+    { name = "Brian DuSell", email = "brian.dusell@inf.ethz.ch" }
+]
+requires-python = ">=3.12,<3.15"
+dependencies = [
+    "fsa @ git+https://github.com/timvieira/fsa.git@25dff9658e5218954b5c7d33c97de054e13328c5",
+    "graphviz (>=0.21,<0.22)",
+    "matplotlib (>=3.10.8,<4)",
+    "more-itertools (>=11.1.0,<12)",
+    "orderedsets (==2025.2)",
+    "rau @ git+https://github.com/bdusell/rau.git@41fe91c0094bbbc247b97f36540f6865ae243502",
+    "scipy (>=1.16.3,<2)",
+    "statsmodels (>=0.14.6,<0.15.0)",
+    "sympy (>=1.14.0,<2)",
+    "torch (>=2.9.1,<3)"
+]
+
+[project.urls]
+repository = "https://github.com/bdusell/private-nn-formal-languages"
+
+[tool.poetry]
+package-mode = false
+
+[tool.poetry.dependencies]
+torch = {source = "pytorch-cpu"}
+
+[tool.poetry.group.test.dependencies]
+mypy = "^1.7.1"
+pytest = "^7.4.3"
+
+[[tool.poetry.source]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[tool.mypy]
+disable_error_code = ["import-untyped"]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

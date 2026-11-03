@@ -1,0 +1,12 @@
+{
+  "mean_num_states": 10,
+  "mean_alphabet_size": 5,
+  "transition_probability": 0.5,
+  "accept_probability": 0.3,
+  "max_density": 0.8,
+  "num_density_samples": 50,
+  "density_length_range": [
+    0,
+    500
+  ]
+}

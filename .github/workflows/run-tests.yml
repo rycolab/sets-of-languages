@@ -1,0 +1,31 @@
+name: Run Unit Tests
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Poetry
+        run: pipx install poetry==2.3.2
+      # See https://github.com/actions/setup-python/blob/main/docs/advanced-usage.md#caching-packages
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14.2"
+          cache: poetry
+      - name: Use GitHub Poetry config
+        run: cp github-poetry/* .
+      - name: Install Python packages
+        run: bash scripts/install_python_packages.bash --no-cache
+      - name: Run unit tests
+        run: bash scripts/poetry_run.bash bash scripts/run_tests.bash
+      - name: Run type checking
+        run: bash scripts/poetry_run.bash bash scripts/check_types.bash

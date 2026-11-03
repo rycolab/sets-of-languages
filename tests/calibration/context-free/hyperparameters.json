@@ -1,0 +1,15 @@
+{
+  "mean_num_variables": 5,
+  "mean_num_terminals": 5,
+  "empty_rule_probability": 0.4,
+  "mean_num_binary_rules_per_variable": 4,
+  "mean_num_terminal_rules_per_variable": 1,
+  "mean_num_self_embedding_chains": 1.5,
+  "mean_self_embedding_chain_length": 3,
+  "max_density": 0.8,
+  "num_density_samples": 50,
+  "density_length_range": [
+    0,
+    500
+  ]
+}

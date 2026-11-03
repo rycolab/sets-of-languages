@@ -1,0 +1,16 @@
+{
+  "mean_alphabet_size": 5,
+  "empty_set_weight": 5,
+  "empty_string_weight": 5,
+  "symbol_weight": 5,
+  "concatenation_weight": 500,
+  "union_weight": 500,
+  "complement_weight": 500,
+  "sharpness": 200,
+  "max_density": 0.8,
+  "num_density_samples": 50,
+  "density_length_range": [
+    0,
+    500
+  ]
+}
