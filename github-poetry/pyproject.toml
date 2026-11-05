@@ -7,6 +7,7 @@ authors = [
     { name = "Alexandra Butoi", email = "alexandra.butoi@inf.ethz.ch" },
     { name = "Brian DuSell", email = "brian.dusell@inf.ethz.ch" }
 ]
+license = "MIT"
 requires-python = ">=3.12,<3.15"
 dependencies = [
     "fsa @ git+https://github.com/timvieira/fsa.git@25dff9658e5218954b5c7d33c97de054e13328c5",
